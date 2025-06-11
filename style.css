@@ -1,0 +1,67 @@
+/* General body styling */
+body {
+    padding-top: 56px; /* Adjust for fixed navbar height */
+    font-family: Arial, sans-serif; /* Example font */
+}
+
+/* Custom hero section overlay for better readability */
+#home {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white; /* Ensure text is visible on dark background */
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+#home > div {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Add a subtle shadow to cards in portfolio */
+.card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Ensure sections take up minimum height for better scrolling */
+section {
+    min-height: 80vh; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* For vertical alignment of content */
+    padding: 60px 0; /* Add padding for spacing */
+}
+
+/* Specific styling for background colors */
+#home { background-color: #343a40; } /* Dark background for home */
+#about { background-color: #ffffff; }
+#portfolio { background-color: #f8f9fa; } /* */
+#program { background-color: #ffffff; }
+#contact { background-color: #f8f9fa; }
+
+/* Customizing Bootstrap buttons if needed */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
